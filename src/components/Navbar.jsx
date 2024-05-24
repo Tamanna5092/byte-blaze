@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [theme, setTheme] = useState('light');
@@ -20,13 +21,13 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
   <div className="flex-1">
-    <a className="btn btn-ghost text-secondary gap-0 text-2xl">Byte<span className='text-primary'>Blaze</span></a>
+    <Link to={'/'} className="btn btn-ghost text-secondary gap-0 text-2xl">Byte<span className='text-primary'>Blaze</span></Link>
   </div>
   <div className="flex-none">
-    <ul className="menu menu-horizontal text-base font-bold px-1">
-      <li><a>Home</a></li>
-      <li><a className='text-primary'>Blog</a></li>
-      <li><a>Bookmark</a></li>
+    <ul className="menu menu-horizontal text-base font-bold px-1 gap-6 mr-6">
+      <NavLink to={'/'} className={({isActive})=> isActive? 'text-primary' : 'font-bold'}>Home</NavLink>
+      <NavLink to={'/blogs'} className={({isActive})=> isActive? 'text-primary' : 'font-bold'}>Blogs</NavLink>
+      <NavLink to={'/bookmarks'} className={({isActive})=> isActive? 'text-primary' : 'font-bold'}>Bookmarks</NavLink>
     </ul>
     <label className="cursor-pointer grid place-items-center">
   <input onChange={handleToggle} type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"/>
