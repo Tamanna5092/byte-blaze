@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="hero -mt-16">
   <div className="hero-content text-center">
     <div className="max-w-md">
-      <h1 className="text-4xl font-bold">Welcome to ByteBlaze</h1>
+      <h1 className="text-4xl font-bold">Welcome to <span className='bg-gradient-to-r bg-300% from-primary via-blue-500 to-secondary text-transparent bg-clip-text animate-gradient'> ByteBlaze</span></h1>
       <p className="py-6">Byte Blaze is a multifaceted technology entity that encompasses several projects and services within the software development and tech consulting space.</p>
       <div className='space-x-6'>
       <Link to={'/blogs'} class="relative inline-block px-4 py-2 font-medium group">
