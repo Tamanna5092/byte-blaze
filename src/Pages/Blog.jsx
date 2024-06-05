@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
 import { MdBookmarkAdd } from "react-icons/md";
+import { saveBlog } from '../utils';
 
 const Blog = () => {
     const [tabIndex, setTabIndex] = useState(0)
@@ -9,7 +10,7 @@ const Blog = () => {
     const {comments_count, title, reading_time_minutes, public_reactions_count, published_at} = blog;
 
 	const handleBookmark = blog =>{
-		console.log(blog)
+		saveBlog(blog)
 	}
 
     return (
