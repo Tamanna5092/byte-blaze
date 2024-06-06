@@ -15,7 +15,7 @@ const Content = () => {
 				tags.map(tag => <a key={tag} rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline dark:bg-violet-600 dark:text-gray-50">#{tag}</a>)
 			}
 		</div>
-         <div className='space-y-4'>
+         <div className='space-y-4' style={{lineBreak:"auto"}}>
             <a href={url} target='_blank' className="text-2xl font-semibold hover:underline focus:underline">{title}</a>
             <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown>
          </div>

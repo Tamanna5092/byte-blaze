@@ -19,7 +19,7 @@ const Bookmarks = () => {
   if (blogs.length < 1)
     return (
       <EmptyState
-        message={"No BookMark Available!"}
+        message={"No Bookmark Available!"}
         address={"/blogs"}
         label={"Go to BookMarks"}
       ></EmptyState>
